@@ -1,0 +1,14 @@
+Delivery Reroute
+================
+
+Contact: Joe Noon - joe[at]stat.im
+
+All emails will be sent to the address you specify instead of to the defined recipients.
+
+Example config/development.rb configuration:
+
+config.after_initialize do
+  ActionMailer::Base.delivery_method = :reroute                # sets that you want to reroute all emails
+  ActionMailer::Base.delivery_reroute_method = :smtp           # sets that you want to use your underlying smtp settings
+  ActionMailer::Base.delivery_reroute_to = 'joe@example.com'   # sets the address that receives all emails
+end
