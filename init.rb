@@ -1,1 +1,1 @@
-require 'action_mailer_ext'
+require 'delivery_reroute'
